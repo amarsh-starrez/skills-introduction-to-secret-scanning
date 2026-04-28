@@ -23,7 +23,7 @@ jobs:
     needs: [find_exercise]
     runs-on: ubuntu-latest
     env:
-      ISSUE_URL: ${{ needs.find_exercise.outputs.issue-url }}
+      ISSUE_URL: https://github.com/amarsh-starrez/skills-introduction-to-secret-scanning/issues/1
 
     steps:
       - name: Checkout
@@ -70,7 +70,7 @@ jobs:
     needs: [find_exercise, check_step_work]
     runs-on: ubuntu-latest
     env:
-      ISSUE_URL: ${{ needs.find_exercise.outputs.issue-url }}
+      ISSUE_URL: https://github.com/amarsh-starrez/skills-introduction-to-secret-scanning/issues/1
 
     steps:
       - name: Checkout
@@ -94,5 +94,5 @@ jobs:
     needs: [find_exercise, post_review_content]
     uses: skills/exercise-toolkit/.github/workflows/finish-exercise.yml@v0.6.0
     with:
-      issue-url: ${{ needs.find_exercise.outputs.issue-url }}
+      issue-url: https://github.com/amarsh-starrez/skills-introduction-to-secret-scanning/issues/1
       exercise-title: "Introduction to Secret Scanning"
